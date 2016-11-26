@@ -2,9 +2,8 @@
  * Created by yuanguozheng on 16/3/10.
  */
 'use strict';
-
-import React, {
-    Component,
+import React,{Component} from 'react';
+import {
     View,
     WebView,
     Platform
@@ -21,7 +20,7 @@ export default class JdWebView extends Component {
             <View style={{flex:1,paddingTop:Platform.os==='ios'?20:0}}>
                 <WebView startInLoadingState={true}
                          javaScriptEnabled={true}
-                         url={this.props.url}
+                         
                          source={{uri:this.props.url,method:'GET'}}/>
             </View>
         )
